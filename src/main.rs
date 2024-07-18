@@ -1,8 +1,13 @@
+use std::env::args;
+
+use longest_nonrepeating_substring::length_of_longest_substring;
 use utils::num_to_list;
 
 mod add_two_numbers_opt;
 mod add_two_numbers;
 mod utils;
+mod longest_nonrepeating_substring;
+mod two_sum_v2;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
@@ -22,9 +27,7 @@ impl ListNode {
 }
 
 fn main() {
-    let n1 = num_to_list(342);
-    let n2 = num_to_list(665);
-    println!("n1: {:?}", n1);
-    println!("n2: {:?}", n2);
-    println!("n1 + n2 = {:?}", add_two_numbers_opt::add_two_opt(Some(n1), Some(n2)));
+  let v = vec![2, 3, 4];
+  let answer = two_sum_v2::two_sum(v, 6);
+  println!("{:?}", answer);
 }
